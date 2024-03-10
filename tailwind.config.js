@@ -16,61 +16,35 @@ export default {
     },
     colors: {
       transparent: "transparent",
-      yellow: {
-        50: "#fcf8ea",
-        100: "#f8f0c9",
-        200: "#f1de97",
-        300: "#e9c55b",
-        400: "#e3b23c", //default for set
-        500: "#d19621",
-        600: "#b4741a",
-        700: "#905418",
-        800: "#78431b",
-        900: "#67391c",
-        950: "#3b1d0d",
-      },
-      whiteRock: {
-        50: "#f7f7ef",
-        100: "#edebd7", //default for set
-        200: "#dbd5ad",
-        300: "#c6ba7e",
-        400: "#b4a15b",
-        500: "#a58f4d",
-        600: "#8e7540",
-        700: "#725936",
-        800: "#614b32",
-        900: "#54412f",
-        950: "#302218",
-      },
-      stone: {
-        50: "#f4f4f2",
-        100: "#e3e3de",
-        200: "#c9c9bf",
-        300: "#aaa89a",
-        400: "#918e7e",
-        500: "#837f6f",
-        600: "#706b5e",
-        700: "#5b564d",
-        800: "#4c4842", //default for set
-        900: "#46423d",
-        950: "#272421",
+      offWhite: "#F2F5F7",
+      neutral: {
+        50: "#f6f5f5",
+        100: "#e7e6e6",
+        200: "#d2cfd0",
+        300: "#b3adae",
+        400: "#8c8485",
+        500: "#71696a",
+        600: "#605a5b",
+        700: "#524c4d",
+        800: "#474343",
+        900: "#3b3838", //default for set
+        950: "#272526",
       },
       primary: {
-        DEFAULT: "#edebd7",
-        hover: "#dbd5ad",
-        text: "#4c4842",
-        dark: "#272421",
-        ["dark-hover"]: "#46423d",
+        DEFAULT: "#0E2F2D",
+        hover: "#1F504B",
+        text: "#f2f5f7",
       },
       secondary: {
-        DEFAULT: "#e3b23c",
-        hover: "#e9c55b",
-        text: "#46423d",
+        DEFAULT: "#2B8C88",
+        hover: "#49B8B2",
+        text: "#F2F5F7",
       },
     },
     fontFamily: {
-      headings: ["Serifa", "serif"],
-      copy: ["MonaSans", "serif"],
+      headings: ["Exo", "sans-serif"],
+      copy: ["Numans", "sans-serif"],
+      links: ["Carme", "sans-serif"],
     },
     fontSize: {
       xs: ["0.75rem", "1rem"],
@@ -101,51 +75,40 @@ export default {
     },
   },
   plugins: [
-    plugin(function ({ addBase, theme, addVariant, addUtilities }) {
+    plugin(function ({ addBase, theme, addVariant }) {
       addVariant("not-last", "&:not(:last-child)");
-      const newUtilities = {
-        ".horizontal-tb": {
-          writingMode: "horizontal-tb",
-        },
-        ".vertical-rl": {
-          writingMode: "vertical-rl",
-        },
-        ".vertical-lr": {
-          writingMode: "vertical-lr",
-        },
-      };
-      addUtilities(newUtilities);
       addBase({
         h1: {
           fontFamily: theme("fontFamily.headings"),
-
+          fontSize: theme("fontSize.8xl"),
           lineHeight: "120%",
           fontWeight: "700",
           margin: "2rem 0 1rem 0",
-          color: theme("colors.purple.DEFAULT"),
+          color: theme("colors.offWhite"),
         },
         h2: {
           fontFamily: theme("fontFamily.headings"),
-          fontSize: theme("fontSize.4xl"),
+          fontSize: theme("fontSize.6xl"),
           lineHeight: "120%",
           fontWeight: "700",
           margin: "2rem 0 1rem 0",
-          color: theme("colors.purple.DEFAULT"),
+          color: theme("colors.secondary.DEFAULT"),
         },
         h3: {
           fontFamily: theme("fontFamily.headings"),
-          fontSize: "2rem",
+          fontSize: theme("fontSize.3xl"),
           lineHeight: "120%",
           fontWeight: "500",
           margin: "2rem 0 1rem 0",
-          color: theme("colors.purple.DEFAULT"),
+          color: theme("colors.secondary.DEFAULT"),
         },
         h4: {
-          fontFamily: theme("fontFamily.headings"),
-          fontSize: theme("fontSize.xl"),
+          fontFamily: theme("fontFamily.copy"),
+          fontSize: theme("fontSize.2xl"),
           lineHeight: "120%",
           fontWeight: "700",
           margin: "2rem 0 1rem 0",
+          color: theme("colors.secondary.DEFAULT"),
         },
         h5: {
           fontFamily: theme("fontFamily.copy"),
@@ -153,18 +116,24 @@ export default {
           lineHeight: "120%",
           fontWeight: "700",
           margin: "2rem 0 1rem 0",
+          color: theme("colors.secondary.DEFAULT"),
         },
         h6: {
           fontFamily: theme("fontFamily.copy"),
-          fontSize: theme("fontSize.xs"),
+          fontSize: theme("fontSize.base"),
           lineHeight: "120%",
           fontWeight: "300",
           margin: "2rem 0 1rem 0",
-          color: theme("colors.primary.DEFAULT"),
+          color: theme("colors.secondary.DEFAULT"),
         },
         p: {
           fontSize: theme("fontSize.base"),
           fontFamily: theme("fontFamily.copy"),
+          lineHeight: "120%",
+          margin: "1rem 0",
+        },
+        a: {
+          fontFamily: theme("fontFamily.links"),
           lineHeight: "120%",
           margin: "1rem 0",
         },

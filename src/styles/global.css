@@ -1,1 +1,6 @@
+/*utilities*/
 @import "./utils/tailwind.css";
+
+/*layouts*/
+@import "./layouts/base.css";
+@import "./layouts/container.css";

@@ -10,10 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/exo": "^5.0.18",
+    "@fontsource/carme": "^5.0.8",
+    "@fontsource/numans": "^5.0.8",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
     "class-variance-authority": "^0.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
