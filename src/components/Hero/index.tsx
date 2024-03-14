@@ -33,14 +33,15 @@ export function Hero() {
         </div>
       </div>
       <aside className="md:absolute right-0 top-0">
-        {SOCIAL_MEDIA_ICONS.map(({ icon, id }) => (
+        {SOCIAL_MEDIA_ICONS.map((icon) => (
           <ThemeButton
-            key={id}
+            key={icon.id}
             onClick={() => {}}
             size="icon"
             variant="outline"
+            className="not-last:mb-3"
           >
-            {icon}
+            {icon.icon}
           </ThemeButton>
         ))}
       </aside>

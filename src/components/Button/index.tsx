@@ -14,6 +14,9 @@ export const buttonStyles = cva(
           "text-secondary",
           "font-normal",
           "text-sm",
+          "py-2",
+          "px-4",
+          "text-base",
         ],
         outline: [
           "border",
@@ -24,6 +27,9 @@ export const buttonStyles = cva(
           "bg-transparent",
           "hover:bg-secondary-hover",
           "hover:border-secondary-hover",
+          "py-2",
+          "px-4",
+          "text-[13px]",
         ],
         dark: [
           "bg-primary-dark",
@@ -32,8 +38,6 @@ export const buttonStyles = cva(
         ],
       },
       size: {
-        default: ["text-base", "py-2", "px-4"],
-        outline: ["text-[13px]", "py-[3px]", "px-4"],
         icon: [
           "rounded-full",
           "w-10",
@@ -47,12 +51,11 @@ export const buttonStyles = cva(
     },
     defaultVariants: {
       variant: "default",
-      size: "default",
     },
   }
 );
 
-type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"a">;
+type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"button">;
 
 export function ThemeButton({
   variant,
@@ -61,9 +64,9 @@ export function ThemeButton({
   ...props
 }: ButtonProps) {
   return (
-    <a
+    <button
       {...props}
       className={twMerge(buttonStyles({ variant, size }), className)}
-    ></a>
+    />
   );
 }

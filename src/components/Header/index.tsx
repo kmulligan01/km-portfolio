@@ -54,17 +54,15 @@ export function Header() {
                 {navLinks.map((link, index) => (
                   <li key={index} className="mr-4">
                     <a
-                      href={link.url}
+                      href={link && link.url}
                       className="text-offWhite hover:text-secondary-hover font-links uppercase text-sm"
                     >
-                      {link.text}
+                      {link && link.text}
                     </a>
                   </li>
                 ))}
               </ul>
-              <ThemeButton variant="outline" size="outline">
-                My Resume
-              </ThemeButton>
+              <ThemeButton variant="outline">My Resume</ThemeButton>
             </nav>
           </div>
         )}
