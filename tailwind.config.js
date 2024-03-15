@@ -63,9 +63,10 @@ export default {
     },
     extend: {
       backgroundImage: {
-        hero: "linear-gradient(to right, rgb(70, 66, 61, 0.6) 0%, rgb(39, 36, 33,0.6) 100%), url('./backgrounds/heroNew.jpg')",
-        intro:
-          "linear-gradient(to right, rgb(215, 213, 205, 0.85) 0%, rgb(244, 244, 242,0.85) 100%), url('./backgrounds/introBg.png')",
+        about:
+          "linear-gradient(to right, rgb(215, 213, 205, 0.5) 0%, rgb(244, 244, 242,0.5) 100%), url('./assets/backgrounds/codebg.jpg')",
+        skills:
+          "linear-gradient(to right, rgb(215, 213, 205, 0.5) 0%, rgb(244, 244, 242,0.5) 100%), url('./assets/backgrounds/skillsbg.jpg')",
         cta: "linear-gradient(to right, rgb(70, 66, 61, 0.7) 0%, rgb(39, 36, 33,0.7) 100%), url('./backgrounds/ctaBg.jpg')",
         sliderBg:
           "linear-gradient(to right, rgb(215, 213, 205, 0.85) 0%, rgb(244, 244, 242,0.85) 100%)",

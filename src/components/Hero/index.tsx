@@ -1,5 +1,5 @@
 import { ThemeButton } from "../Button";
-
+import { TypeAnimation } from "react-type-animation";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -18,7 +18,22 @@ export function Hero() {
       <div>
         <h6>Hey there and welcome! My name is</h6>
         <h1 className="font-black">Kendra Mulligan</h1>
-        <h2 className="font-black">Developer & Nature Lover</h2>
+        <TypeAnimation
+          sequence={[
+            "Developer & Puppy Lover",
+            1500,
+            "Developer & Avid Reader",
+            1500,
+            "Developer & Camper",
+            1500,
+            "Developer & Kayaker",
+            1500,
+          ]}
+          wrapper="h2"
+          speed={10}
+          style={{ fontWeight: 800 }}
+          repeat={Infinity}
+        />
         <p className="text-offWhite md:max-w-4xl">
           I’ve been developing for over 5 years, and have recently gained the
           prominent title of Senior Web Developer. When I’m not coding, you can

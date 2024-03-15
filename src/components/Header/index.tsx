@@ -40,9 +40,9 @@ export function Header() {
 
   return (
     <header className="bg-transparent">
-      <div className="container py-8">
+      <div className="container-none py-8">
         {!screenIsSmall && (
-          <div className="flex justify-between container">
+          <div className="flex justify-between container-none">
             <img
               src={logo}
               alt="Whiskey Wave Logo"

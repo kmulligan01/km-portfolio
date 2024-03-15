@@ -1,0 +1,34 @@
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(14, 47, 45, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay h2,
+.overlay p {
+  margin: 0;
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+
+.blur {
+  filter: blur(5px);
+}
