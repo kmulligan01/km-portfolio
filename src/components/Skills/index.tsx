@@ -1,10 +1,29 @@
 import Slider from "@mui/material/Slider";
 import { infoObject } from "../../data/infoData";
 import Coffee from "../../assets/coffee.jpg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export function Skills() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.5 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <section className="container grid lg:grid-cols-2 gap-14">
+    <motion.section
+      id="skills"
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+      className="container grid lg:grid-cols-2 gap-14"
+    >
       <div>
         <h3 className="uppercase border-b-2 border-offWhite pb-1">
           My Software Skills
@@ -48,6 +67,6 @@ export function Skills() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

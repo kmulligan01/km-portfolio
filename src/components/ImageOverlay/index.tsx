@@ -1,12 +1,12 @@
 import { useState } from "react";
 import style from "./style.module.css";
 import { ThemeButton } from "../Button";
+import { motion } from "framer-motion";
 
 type ImageOverlayProps = {
   imageUrl: string;
   alt: string;
   title: string;
-  description: string;
   portLink: string;
 };
 
@@ -14,7 +14,6 @@ export function ImageOverlay({
   imageUrl,
   alt,
   title,
-  description,
   portLink,
 }: ImageOverlayProps) {
   const [hovered, setHovered] = useState(false);
@@ -29,7 +28,7 @@ export function ImageOverlay({
 
   return (
     <div
-      className={style.imageContainer}
+      className={`${style.imageContainer} border-4 border-offWhite rounded-md`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -39,23 +38,33 @@ export function ImageOverlay({
         alt={alt}
         loading="lazy"
         style={{
-          borderRadius: "8px",
           display: "block",
           width: "100%",
           cursor: "pointer",
           maxHeight: "400px",
+          filter: "grayscale(100%)",
+          opacity: "0.7",
         }}
         className={hovered ? "blur" : ""}
       />
 
       {hovered && (
-        <div className={`${style.overlay} text-center rounded-md p-3`}>
-          <a href={portLink} target="_blank">
+        <motion.div
+          className={`${style.overlay} text-center  p-3`}
+          whileHover={{ scale: 1.2 }}
+        >
+          <div className="flex flex-col items-center">
             <h4 className="text-offWhite">{title}</h4>
-            <p className="p-2">{description}</p>
-            <ThemeButton className="mt-8">View</ThemeButton>
-          </a>
-        </div>
+            <ThemeButton
+              className="mt-8"
+              url={portLink}
+              target={"_blank"}
+              aria-label={`View Kendra's ${title} project`}
+            >
+              View
+            </ThemeButton>
+          </div>
+        </motion.div>
       )}
     </div>
   );

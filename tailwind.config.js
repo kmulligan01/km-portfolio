@@ -130,7 +130,7 @@ export default {
         p: {
           fontSize: theme("fontSize.base"),
           fontFamily: theme("fontFamily.copy"),
-          lineHeight: "120%",
+          lineHeight: "150%",
           margin: "1rem 0",
         },
         a: {

@@ -1,9 +1,11 @@
 import AboutImg from "../../assets/nyc.jpeg";
+import { ThemeButton } from "../Button";
+import { EntranceScroll } from "../EntranceScroll";
 
 export function About() {
   return (
-    <section>
-      <div className="container grid grid-cols-2 gap-12 items-start">
+    <EntranceScroll>
+      <section className="container grid grid-cols-2 gap-12 items-start">
         <div className="relative h-fit">
           <div className="  border-8 border-secondary rounded-md h-[400px] w-[500px] bg-about contain bg-cover bg-no-repeat">
             <img
@@ -18,16 +20,27 @@ export function About() {
             A Little More About Me
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
-            tempore incidunt rem consequuntur corporis quos sit minima quisquam
-            quidem adipisci. Amet cupiditate fuga iure commodi. Alias numquam
-            suscipit consectetur magni. Soluta commodi magni porro omnis ab vel
-            impedit quia aliquam harum odio voluptate aspernatur vitae quis
-            fugit ipsum ut iste dolorem sint, iusto veniam eum assumenda. Optio
-            temporibus quae animi!
+            I started teaching myself to code via videos and library books in
+            2012, where my love for coding was introduced. I continued to learn
+            until I felt I could use some more guidance, and that was how I
+            found myself reasearching and applying for coding bootcamps in the
+            Denver area. I found a coding bootcamp at Denver University and
+            applied. I was one of 20 students selected from a pool of over 200
+            applicants to be part of the six month long endeavor while working
+            fulltime in finance.
           </p>
+          <p>
+            When I'm not coding, I love enjoying the Colorado outdoors, or
+            cuddled up on the couch with a good book and hot cup of coffee. I
+            write poetry, play softball, and I'm part of a couple board/card
+            game groups located around Denver. My wife and I have made Colorado
+            our home after moving to Denver eight years ago.
+          </p>
+          <ThemeButton url={"mailto:kmulligan589@gmail.com"} target={"_blank"}>
+            Send Me An Email
+          </ThemeButton>
         </div>
-      </div>
-    </section>
+      </section>
+    </EntranceScroll>
   );
 }

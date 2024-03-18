@@ -1,14 +1,9 @@
 import * as React from "react";
 import { ThemeButton } from "../Button";
 import { Drawer, Link } from "@mui/material";
-
 import logo from "../../assets/port-logo.png";
-
 import MenuIcon from "@mui/icons-material/Menu";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
+import { SOCIAL_MEDIA_ICONS } from "../../data/infoData";
 
 type MobileNavProps = {
   links: {
@@ -34,13 +29,6 @@ export default function MobileNav({ links }: MobileNavProps) {
       setState({ ...state, [anchor]: open });
     };
 
-  const SOCIAL_MEDIA_ICONS = [
-    { id: 1, icon: <FacebookIcon />, label: "Facebook" },
-    { id: 2, icon: <InstagramIcon />, label: "Instagram" },
-    { id: 3, icon: <XIcon />, label: "X" },
-    { id: 4, icon: <PhoneIphoneIcon />, label: "Phone" },
-  ];
-
   return (
     <>
       <div className="flex justify-between items-center">
@@ -50,7 +38,11 @@ export default function MobileNav({ links }: MobileNavProps) {
           className="lg:max-w-[150px] max-w-[60px] max-h-[60px]"
         />
 
-        <ThemeButton onClick={toggleDrawer(anchor, true)} size="icon">
+        <ThemeButton
+          onClick={toggleDrawer(anchor, true)}
+          size="icon"
+          aria-label="Open mobile menu"
+        >
           <MenuIcon />
         </ThemeButton>
       </div>
@@ -83,15 +75,18 @@ export default function MobileNav({ links }: MobileNavProps) {
 
         <div className="bottom-0 absolute px-2 pb-8 left-0">
           <div className="flex">
-            {SOCIAL_MEDIA_ICONS.map(({ icon, id }) => (
+            {SOCIAL_MEDIA_ICONS.map((item) => (
               <ThemeButton
-                key={id}
+                key={item.id}
                 onClick={() => {}}
                 size="icon"
                 variant="dark"
                 className="not-last:mr-2"
+                url={item.url}
+                target={"_blank"}
+                aria-label={item.label}
               >
-                {icon}
+                <item.icon />
               </ThemeButton>
             ))}
           </div>

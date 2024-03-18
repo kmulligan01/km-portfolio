@@ -6,16 +6,23 @@ import logo from "../../assets/port-logo.png";
 const navLinks = [
   {
     text: "My Story",
-    url: "/about",
+    url: "#about",
   },
   {
     text: "My Pieces",
-    url: "/pieces",
+    url: "#portfolio",
   },
-  ,
+  {
+    text: "Experience",
+    url: "#experience",
+  },
+  {
+    text: "Skillset",
+    url: "#skills",
+  },
   {
     text: "Contact Me",
-    url: "/contact",
+    url: "mailto:kmulligan589@gmail.com",
   },
 ];
 
@@ -62,7 +69,14 @@ export function Header() {
                   </li>
                 ))}
               </ul>
-              <ThemeButton variant="outline">My Resume</ThemeButton>
+              <ThemeButton
+                variant="outline"
+                url={"mailto:kmulligan589@gmail.com"}
+                target={"_blank"}
+                aria-label="Download Kendra's resume"
+              >
+                My Resume
+              </ThemeButton>
             </nav>
           </div>
         )}

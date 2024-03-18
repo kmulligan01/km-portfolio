@@ -55,18 +55,29 @@ export const buttonStyles = cva(
   }
 );
 
-type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"button">;
+type ButtonProps = VariantProps<typeof buttonStyles> &
+  ComponentProps<"a"> & {
+    url?: string;
+    target?: string;
+  };
 
 export function ThemeButton({
   variant,
   size,
   className,
+  url,
+  target,
+  children,
   ...props
 }: ButtonProps) {
   return (
-    <button
-      {...props}
+    <a
+      href={url}
+      target={target}
       className={twMerge(buttonStyles({ variant, size }), className)}
-    />
+      {...props}
+    >
+      {children}
+    </a>
   );
 }
