@@ -76,7 +76,6 @@ export default {
       addBase({
         h1: {
           fontFamily: theme("fontFamily.headings"),
-          fontSize: theme("fontSize.8xl"),
           lineHeight: "120%",
           fontWeight: "700",
           margin: "2rem 0 1rem 0",

@@ -11,7 +11,7 @@ export function About() {
             <img
               src={AboutImg}
               alt="Picture of Kendra in New York City"
-              className="lg:absolute max-w-lg -bottom-10 right-10 rounded-md shadow-md border-offWhite border-8"
+              className="xl:absolute max-w-lg -bottom-10 right-10 rounded-md shadow-md border-offWhite border-8"
             />
           </div>
         </div>
@@ -36,7 +36,7 @@ export function About() {
             game groups located around Denver. My wife and I have made Colorado
             our home after moving to Denver eight years ago.
           </p>
-          <ThemeButton url={"mailto:kmulligan589@gmail.com"}>
+          <ThemeButton url={"mailto:kmulligan589@gmail.com"} target={"_blank"}>
             Send Me An Email
           </ThemeButton>
         </div>

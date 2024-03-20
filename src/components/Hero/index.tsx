@@ -10,7 +10,7 @@ export function Hero() {
       <section className="container lg:mt-40 relative mt-0">
         <div className="">
           <h6>Hey there and welcome! My name is</h6>
-          <h1 className="font-black">Kendra Mulligan</h1>
+          <h1 className="font-black md:text-8xl text-6xl">Kendra Mulligan</h1>
           <TypeAnimation
             sequence={[
               "Developer & Puppy Lover",
@@ -37,7 +37,7 @@ export function Hero() {
           </p>
           <div className="md:mt-10">
             <ThemeButton
-              className="mr-4"
+              className="mr-4 md:mb-0 mb-4"
               url={"mailto:kmulligan589@gmail.com"}
               target={"_blank"}
               aria-label="Send Kendra an email"
@@ -50,7 +50,7 @@ export function Hero() {
             />
           </div>
         </div>
-        <aside className="lg:absolute lg:right-5 lg:top-0 hidden lg:block">
+        <aside className="xl:absolute right-5 top-0 hidden xl:block">
           {SOCIAL_MEDIA_ICONS.map((item) => (
             <ThemeButton
               key={item.id}
