@@ -59,7 +59,6 @@ export function Hero() {
               variant="outline"
               className="not-last:mb-3"
               url={item.url}
-              target={"_blank"}
             >
               <item.icon />
             </ThemeButton>

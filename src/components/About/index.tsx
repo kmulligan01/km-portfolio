@@ -36,7 +36,7 @@ export function About() {
             game groups located around Denver. My wife and I have made Colorado
             our home after moving to Denver eight years ago.
           </p>
-          <ThemeButton url={"mailto:kmulligan589@gmail.com"} target={"_blank"}>
+          <ThemeButton url={"mailto:kmulligan589@gmail.com"}>
             Send Me An Email
           </ThemeButton>
         </div>
