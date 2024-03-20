@@ -53,9 +53,9 @@ export default function MobileNav({ links }: MobileNavProps) {
         sx={{
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: "200px",
+            width: "50%",
             paddingY: "32px",
-            background: "#dbd5ad",
+            background: "#F2F5F7",
           },
         }}
       >
@@ -66,7 +66,7 @@ export default function MobileNav({ links }: MobileNavProps) {
               href={link.url}
               underline="none"
               color="#272421"
-              className="not-last:border-b not-last:mb-2 "
+              className="hover:bg-primary px-2 not-last:mb-2 transition-colors hover:rounded-sm hover:text-offWhite "
             >
               {link.text}
             </Link>

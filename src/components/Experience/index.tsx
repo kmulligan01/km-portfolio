@@ -10,13 +10,13 @@ import {
 
 import { jobObject } from "../../data/infoData";
 import { CodeXml } from "lucide-react";
-import { ThemeButton } from "../Button";
+import { PDFButton } from "../PDFButton";
 import { EntranceScroll } from "../EntranceScroll";
 
 export function Experience() {
   return (
     <EntranceScroll>
-      <section id="about" className="container grid lg:grid-cols-2 gap-8">
+      <section id="experience" className="container grid lg:grid-cols-2 gap-8">
         <div>
           {jobObject.map((job, index) => (
             <Timeline position="alternate" key={job.id}>
@@ -71,13 +71,10 @@ export function Experience() {
             Headless WordPress, email marketing templates, attribution, and much
             more.
           </p>
-          <ThemeButton
-            url={"mailto:kmulligan589@gmail.com"}
-            target={"_blank"}
+          <PDFButton
             aria-label="Download Kendra's resume"
-          >
-            Download Resume
-          </ThemeButton>
+            text="Download Resume"
+          />
         </div>
       </section>
     </EntranceScroll>

@@ -38,7 +38,6 @@ export function PortfolioFilter() {
               imageUrl={item.img}
               alt={item.alt}
               title={item.portTitle}
-              description={item.description}
               portLink={item.url}
             />
           </div>

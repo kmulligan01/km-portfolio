@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MobileNav from "../MobileNav";
-import { ThemeButton } from "../Button";
+import { PDFButton } from "../PDFButton";
 import logo from "../../assets/port-logo.png";
 
 const navLinks = [
@@ -47,37 +47,35 @@ export function Header() {
 
   return (
     <header className="bg-transparent">
-      <div className="container-none py-8">
+      <div className="container-none lg:py-8 pt-8">
         {!screenIsSmall && (
-          <div className="flex justify-between container-none">
+          <div className="flex justify-between items-center container-none">
             <img
               src={logo}
               alt="Whiskey Wave Logo"
               className="lg:max-w-[150px] max-w-[60px] max-h-[60px]"
             />
-
-            <nav className="flex">
-              <ul className="flex justify-around items-center ">
-                {navLinks.map((link, index) => (
-                  <li key={index} className="mr-4">
-                    <a
-                      href={link && link.url}
-                      className="text-offWhite hover:text-secondary-hover font-links uppercase text-sm"
-                    >
-                      {link && link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <ThemeButton
-                variant="outline"
-                url={"mailto:kmulligan589@gmail.com"}
-                target={"_blank"}
+            <div className="flex items-center">
+              <nav className="flex">
+                <ul className="flex justify-around items-center ">
+                  {navLinks.map((link, index) => (
+                    <li key={index} className="mr-4">
+                      <a
+                        href={link && link.url}
+                        className="text-offWhite hover:text-secondary-hover font-links uppercase text-sm"
+                      >
+                        {link && link.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <PDFButton
                 aria-label="Download Kendra's resume"
-              >
-                My Resume
-              </ThemeButton>
-            </nav>
+                text="My Resume"
+                variant={true}
+              />
+            </div>
           </div>
         )}
         {isScreenSmall() && <MobileNav links={navLinks} />}

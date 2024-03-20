@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -6,7 +5,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 //pages
 import Home from "./pages/Home";
 import NotFoundPage from "./pages/404";
-import Contact from "./pages/Contact";
 
 //styles and fonts
 import "./styles/global.css";
@@ -20,10 +18,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     errorElement: <NotFoundPage />,
-  },
-  {
-    path: "contact",
-    element: <Contact />,
   },
 ]);
 

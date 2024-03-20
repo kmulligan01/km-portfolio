@@ -13,7 +13,6 @@ export const buttonStyles = cva(
           "hover:text-offWhite",
           "text-secondary",
           "font-normal",
-          "text-sm",
           "py-2",
           "px-4",
           "text-base",
@@ -32,9 +31,10 @@ export const buttonStyles = cva(
           "text-[13px]",
         ],
         dark: [
-          "bg-primary-dark",
-          "hover:bg-primary-dark-hover",
-          "text-whiteRock-100",
+          "bg-primary",
+          "hover:bg-primary-hover",
+          "hover:text-offWhite",
+          "text-offWhite",
         ],
       },
       size: {

@@ -5,13 +5,13 @@ import { EntranceScroll } from "../EntranceScroll";
 export function About() {
   return (
     <EntranceScroll>
-      <section className="container grid grid-cols-2 gap-12 items-start">
+      <section className="container lg:grid lg:grid-cols-2 lg:gap-12 items-start">
         <div className="relative h-fit">
-          <div className="  border-8 border-secondary rounded-md h-[400px] w-[500px] bg-about contain bg-cover bg-no-repeat">
+          <div className="xl:border-8 xl:border-secondary rounded-md h-[400px] w-[500px] xl:bg-about contain bg-cover bg-no-repeat bg-none">
             <img
               src={AboutImg}
               alt="Picture of Kendra in New York City"
-              className="absolute max-w-lg -bottom-10 right-10 rounded-md shadow-md border-offWhite border-8"
+              className="lg:absolute max-w-lg -bottom-10 right-10 rounded-md shadow-md border-offWhite border-8"
             />
           </div>
         </div>
