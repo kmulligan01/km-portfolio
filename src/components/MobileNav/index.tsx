@@ -34,7 +34,7 @@ export default function MobileNav({ links }: MobileNavProps) {
       <div className="flex justify-between items-center">
         <img
           src={logo}
-          alt="Whiskey Wave Logo"
+          alt="Kendra Mulligan Logo"
           className="lg:max-w-[150px] max-w-[60px] max-h-[60px]"
         />
 
@@ -53,7 +53,7 @@ export default function MobileNav({ links }: MobileNavProps) {
         sx={{
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: "50%",
+            width: "250px",
             paddingY: "32px",
             background: "#F2F5F7",
           },

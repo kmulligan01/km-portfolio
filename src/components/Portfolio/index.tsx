@@ -37,9 +37,12 @@ export function Portfolio() {
               </div>
             </div>
 
-            <div className="border-b border-b-offWhite my-10 grid  grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
+            <div className="border-b border-b-offWhite my-10 grid  grid-cols-[repeat(auto-fill,minmax(200px,1fr))] ">
               {item.languages.map((language, languageIndex) => (
-                <div key={languageIndex} className="not-last:mb-8 ">
+                <div
+                  key={languageIndex}
+                  className="not-last:mb-8 last:mb-4 xl:last:mb-0"
+                >
                   <CustomIcon customIcon={language} />
                 </div>
               ))}
