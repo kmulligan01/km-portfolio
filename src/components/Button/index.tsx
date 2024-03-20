@@ -76,6 +76,7 @@ export function ThemeButton({
       target={target}
       className={twMerge(buttonStyles({ variant, size }), className)}
       {...props}
+      rel="noopener noreferrer"
     >
       {children}
     </a>

@@ -64,9 +64,9 @@ export default {
     extend: {
       backgroundImage: {
         about:
-          "linear-gradient(to right, rgb(215, 213, 205, 0.5) 0%, rgb(244, 244, 242,0.5) 100%), url('./backgrounds/codebg.jpg')",
+          "linear-gradient(to right, rgb(215, 213, 205, 0.5) 0%, rgb(244, 244, 242,0.5) 100%), url('/src/assets/backgrounds/codebg.jpg')",
         skills:
-          "linear-gradient(to right, rgb(215, 213, 205, 0.5) 0%, rgb(244, 244, 242,0.5) 100%), url('./backgrounds/skillsbg.jpg')",
+          "linear-gradient(to right, rgb(215, 213, 205, 0.5) 0%, rgb(244, 244, 242,0.5) 100%), url('/src/assets/backgrounds/skillsbg.jpg')",
       },
     },
   },

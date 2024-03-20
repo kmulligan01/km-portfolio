@@ -54,11 +54,11 @@ export function Hero() {
           {SOCIAL_MEDIA_ICONS.map((item) => (
             <ThemeButton
               key={item.id}
-              onClick={() => {}}
               size="icon"
               variant="outline"
               className="not-last:mb-3"
               url={item.url}
+              target={"_blank"}
             >
               <item.icon />
             </ThemeButton>
