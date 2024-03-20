@@ -20,7 +20,7 @@ export function Skills() {
               key={data.id}
               className="flex justify-between items-center my-8"
             >
-              <div className="flex gap-4">
+              <div className="flex gap-4 mr-4 md:mr-0">
                 <div className="border-2 border-secondary p-2 rounded-md flex items-center justify-center ">
                   <data.icon width="30" height="30" className="invert " />
                 </div>

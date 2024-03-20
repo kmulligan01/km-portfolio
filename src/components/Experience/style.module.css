@@ -1,0 +1,27 @@
+@media (min-width: 200px) {
+  .timelineDates {
+    flex-wrap: wrap;
+  }
+
+  .timelineDateText {
+    text-align: left !important;
+  }
+
+  .timelineDot {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .timelineDates {
+    flex-wrap: nowrap;
+  }
+
+  .timelineDateText {
+    text-align: right !important;
+  }
+
+  .timelineDot {
+    display: flex !important;
+  }
+}

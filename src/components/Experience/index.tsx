@@ -12,26 +12,37 @@ import { jobObject } from "../../data/infoData";
 import { CodeXml } from "lucide-react";
 import { PDFButton } from "../PDFButton";
 import { EntranceScroll } from "../EntranceScroll";
+import style from "./style.module.css";
 
 export function Experience() {
   return (
     <EntranceScroll>
-      <section id="experience" className="container grid lg:grid-cols-2 gap-8">
+      <section
+        id="experience"
+        className="container lg:grid lg:grid-cols-2 lg:gap-8"
+      >
         <div>
           {jobObject.map((job, index) => (
             <Timeline position="alternate" key={job.id}>
-              <TimelineItem>
+              <TimelineItem className={style.timelineDates}>
                 <TimelineOppositeContent
                   align="right"
                   sx={{ py: "12px", px: 2 }}
+                  className={style.timelineDateText}
                 >
                   <span className="font-links text-base">{job.dates}</span>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="secondary" variant="outlined">
+                  <TimelineDot
+                    color="secondary"
+                    variant="outlined"
+                    className={style.timelineDot}
+                  >
                     <CodeXml />
                   </TimelineDot>
-                  {index < jobObject.length - 1 && <TimelineConnector />}
+                  {index < jobObject.length - 1 && (
+                    <TimelineConnector className={style.timelineDot} />
+                  )}
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
                   <span className="font-links text-secondary text-lg">

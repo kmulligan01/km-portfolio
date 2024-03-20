@@ -26,6 +26,7 @@ export function Hero() {
             speed={10}
             style={{ fontWeight: 800 }}
             repeat={Infinity}
+            className={"hidden md:inline"}
           />
           <p className="text-offWhite md:max-w-4xl">
             I’ve been developing for over 5 years, and have recently gained the
@@ -37,7 +38,7 @@ export function Hero() {
           </p>
           <div className="md:mt-10">
             <ThemeButton
-              className="mr-4 md:mb-0 mb-4"
+              className="mr-4 "
               url={"mailto:kmulligan589@gmail.com"}
               target={"_blank"}
               aria-label="Send Kendra an email"
@@ -47,6 +48,7 @@ export function Hero() {
             <PDFButton
               aria-label="Download Kendra's resume"
               text="Download Resume"
+              className="md:mt-0 mt-4"
             />
           </div>
         </div>

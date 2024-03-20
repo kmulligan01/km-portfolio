@@ -6,12 +6,12 @@ export function About() {
   return (
     <EntranceScroll>
       <section className="container lg:grid lg:grid-cols-2 lg:gap-12 items-start">
-        <div className="relative h-fit">
-          <div className="xl:border-8 xl:border-secondary rounded-md h-[400px] w-[500px] xl:bg-about contain bg-cover bg-no-repeat bg-none">
+        <div className="relative">
+          <div className="xl:border-8 xl:border-secondary rounded-md xl:h-[400px] xl:w-[500px] xl:bg-about contain bg-cover bg-no-repeat bg-none">
             <img
               src={AboutImg}
               alt="Picture of Kendra in New York City"
-              className="xl:absolute max-w-lg -bottom-10 right-10 rounded-md shadow-md border-offWhite border-8"
+              className="xl:absolute md:max-w-lg xl:-bottom-10 xl:right-10 rounded-md shadow-md border-offWhite border-8 max-w-full"
             />
           </div>
         </div>

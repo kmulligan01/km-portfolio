@@ -5,9 +5,10 @@ import { twMerge } from "tailwind-merge";
 type PDFButtonProps = {
   text: string;
   variant?: boolean;
+  className?: string;
 };
 
-export function PDFButton({ text, variant }: PDFButtonProps) {
+export function PDFButton({ text, variant, className }: PDFButtonProps) {
   const handleButtonClick = () => {
     window.open(Resume, "_blank");
   };
@@ -18,7 +19,7 @@ export function PDFButton({ text, variant }: PDFButtonProps) {
   return (
     <button
       onClick={handleButtonClick}
-      className={twMerge(buttonClass, "grow-0 flex-shrink-0 py-[5px]")}
+      className={twMerge(buttonClass, className)}
     >
       {text}
     </button>
